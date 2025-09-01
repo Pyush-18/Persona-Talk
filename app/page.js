@@ -1,9 +1,9 @@
-import ChatSection from "@/libs/components/ChatSection";
+import Home from "@/libs/components/Home";
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 flex items-center justify-center p-4 font-sans">
-      <ChatSection />
+    <div className="h-screen hero-gradient-bg flex items-center justify-center p-4">
+      <Home />
     </div>
   );
 }

@@ -24,16 +24,16 @@ function Navbar({ sendDataToPersona }) {
   };
 
   return (
-    <div className="mb-6 flex items-center justify-between bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-xl p-4 shadow-lg">
-      <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+    <div className="mb-6 flex items-center justify-between bg-zinc-800/50 backdrop-blur-md border border-zinc-700 rounded-xl p-4 shadow-lg">
+      <h2 className="text-2xl font-bold text-gradient">
         EchoPersona
       </h2>
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-[180px] p-3 bg-gray-700 text-gray-100 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 flex items-center justify-between transition-all duration-200 hover:bg-gray-600"
+          className="w-[180px] p-3 bg-zinc-700 text-gray-100 border border-zinc-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 flex items-center justify-between transition-all duration-200 hover:bg-zinc-600"
         >
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-2 ">
             {selectedPersona ? (
               <>
                 <img
@@ -64,12 +64,12 @@ function Navbar({ sendDataToPersona }) {
         </button>
 
         {isOpen && (
-          <div className="absolute top-full mt-2 w-[180px] bg-gray-800 border border-gray-700 rounded-lg shadow-xl z-10 overflow-hidden">
+          <div className="absolute top-full mt-2 w-[180px] bg-zinc-800 border border-zinc-700 rounded-lg shadow-xl z-10 overflow-hidden">
             {personas.map((persona) => (
               <button
                 key={persona.value}
                 onClick={() => handleSelectPersona(persona)}
-                className="w-full flex items-center gap-3 p-3 text-gray-100 hover:bg-gray-700/80 transition-all duration-200"
+                className="w-full flex items-center gap-3 p-3 text-gray-100 hover:bg-zinc-700/80 transition-all duration-200"
               >
                 <img
                   src={persona.image}

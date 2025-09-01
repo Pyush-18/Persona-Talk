@@ -62,7 +62,7 @@ function ChatSection() {
 
   return (
     <>
-      <div className="bg-gray-800/80 backdrop-blur-md border border-gray-700 rounded-2xl w-full max-w-4xl flex flex-col h-[90vh] shadow-2xl">
+      <div className="bg-zinc-900/80 backdrop-blur-md border border-zinc-700 rounded-2xl w-full max-w-4xl flex flex-col h-[90vh] shadow-2xl">
         <Navbar sendDataToPersona={sendDataToPersona} />
 
         <div className="flex-grow overflow-y-auto  p-4 custom-scrollbar pb-4 space-y-4">
@@ -89,7 +89,7 @@ function ChatSection() {
                 className={`max-w-[70%] p-4 rounded-xl shadow-lg transform transition-all duration-200 hover:scale-[1.02] ${
                   message.sender === "user"
                     ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-br-none"
-                    : "bg-gray-700 text-gray-100 rounded-bl-none"
+                    : "bg-zinc-700 text-gray-100 rounded-bl-none"
                 }`}
               >
                 {message.text}
@@ -107,7 +107,7 @@ function ChatSection() {
           ))}
 
           {loader && (
-            <div className="bg-gray-700/50 rounded-xl px-4 py-2 w-fit ml-12 animate-pulse flex items-center gap-2">
+            <div className="bg-zinc-700/50 rounded-xl px-4 py-2 w-fit ml-12 animate-pulse flex items-center gap-2">
               <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce"></div>
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100"></div>
               <div className="w-2 h-2 bg-indigo-500 rounded-full animate-bounce delay-200"></div>
@@ -118,19 +118,19 @@ function ChatSection() {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="flex w-full items-center space-x-4 p-4 border-t border-gray-600">
+        <div className="flex w-full items-center space-x-4 p-4 border-t border-zinc-600">
           <textarea
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Type your message here..."
-            className="flex-grow p-4 rounded-xl bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200 resize-none h-12 focus:h-24"
+            className="flex-grow p-4 rounded-xl bg-zinc-700 text-gray-100 placeholder-gray-400 border border-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-200 resize-none h-12 focus:h-24"
             rows={1}
             style={{ minHeight: "3rem", maxHeight: "10rem" }}
           ></textarea>
           <button
             onClick={handleSendMessage}
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-zinc-900 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Send
           </button>
